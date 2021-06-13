@@ -1,0 +1,203 @@
+﻿
+<!DOCTYPE html>
+<html lang="fa" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>دالیا گالری</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="فروشگاه اینترنتی زیورآلات نقره  سرویس نقره النگو نقره - مجموعه هاشمیان">
+    <meta name="keywords" content="نقره">
+    <meta name="keywords" content="فروشگاه هاشمیان">
+    <meta name="keywords" content="نقره هاشمیان">
+    <meta name="keywords" content="سرویس نقره">
+    <meta name="keywords" content="النگو نقره">
+    <meta name="author" content="مهدی شرفی">
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="Content\repair\img/5e45866f-64e4-43a9-812a-3679dbeaf25c.jpg">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="Content\repair\img/dalia-RGB-04.png">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="Content\repair\img/dalia-RGB-04.png">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="Content\repair\img/dalia-RGB-04.png">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="Content\repair\img/dalia-RGB-04.png">
+
+    <!-- ============== Resources style ============== -->
+    <link rel="stylesheet" href="Content\repair\css\style.css">
+
+    <!-- Modernizr runs quickly on page load to detect features -->
+    <script src="Content\repair\js\modernizr.custom.js"></script>
+</head>
+
+<body>
+
+    <!-- Page preloader -->
+    <div id="loading">
+        <div id="preloader">
+            <span></span>
+            <span></span>
+            <div id="preloader_text">در حال بارگذاری ...</div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="global-overlay">
+        <div class="overlay">
+
+            <div id="container">
+                <div id="output" class="back-fss"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- START - Home Part -->
+    <section id="home-wrap">
+
+        <canvas id="square-canvas" width="" height=""></canvas>
+
+        <!-- Stars Overlay - Uncomment the next 3 lines to activate the effect-->
+        
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            
+
+        <div class="content">
+
+            <!-- Your logo -->
+            <img src="Content\repair\img/dalia-RGB-04.png" alt="" class="brand-logo text-intro opacity-0">
+
+            <h1 class="text-intro text-countdown opacity-0 has_flipclock">
+                <div id="getting-started">
+
+                    <div class="flipclock">
+
+                        <div class="clock_titles">
+                            <span class="seconds">ثانیه</span>
+                            <span class="minutes">دقیقه</span>
+                            <span class="hours">ساعت</span>
+                            <span class="days">روز</span>
+                        </div>
+
+                    </div>
+
+                    <span>وبسایت درحال بروزرسانی است</span>
+
+                </div>
+            </h1>
+
+            <p class="text-intro opacity-0"></p>
+
+        </div> <!-- /. content -->
+        <!-- Social icons -->
+        <div class="social-icons text-intro opacity-0">
+
+            <a href="https://wa.me/+9809017700584"><i class="fa fa-whatsapp"></i></a>
+            <a href="tel:09017700584"><i class="fa fa-phone"></i></a>
+            <a href="https://www.instagram.com/dalia.gallery1/"><i class="fa fa-instagram"></i></a>
+            <a href="https://t.me/dalia_gallery1"><i class="fa fa-telegram"></i></a>
+            <a href="https://https://mahdisharafi.github.io/site/"><i class="fa fa-code"></i></a>
+
+
+        </div> <!-- /. social-icons -->
+
+    </section>
+    <!-- END - Home Part -->
+    <!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
+    <!-- ********** Resources jQuery ********** -->
+    <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
+    <!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
+    <script src="Content\repair\js\jquery.min.js"></script>
+    <script src="Content\repair\js\jquery.easings.min.js"></script>
+    <script src="Content\repair\js\bootstrap.min.js"></script>
+
+    <!-- Accelerated JavaScript animation JS file -->
+    <script src="Content\repair\js\velocity.min.js"></script>
+
+    <!-- Accelerated JavaScript animation UI JS file -->
+    <script src="Content\repair\js\velocity.ui.min.js"></script>
+
+
+    <!-- Contact form plugin -->
+    <script src="Content\repair\js\contact-me.js"></script>
+
+    <!-- Scroll plugin -->
+    <script src="Content\repair\js\jquery.mousewheel.js"></script>
+
+    <!-- Custom Scrollbar plugin -->
+    <script src="Content\repair\js\jquery.mCustomScrollbar.js"></script>
+
+
+    <!-- PhotoSwipe UI JS file -->
+    <script src="Content\repair\js\photoswipe-ui-default.js"></script>
+
+    <!-- Countdown plugin -->
+    <script src="Content\repair\js\jquery.transit.min.js"></script>
+    <script src="Content\repair\js\flipClock\flipClock.min.js"></script>
+
+    <script>
+        $(function () {
+
+            // Insert countdown's end date in 'YYYY/mm/dd' (Year/Month/Day) format.
+            var end_date = '2021/06/18';
+
+            // Insert countdown's end time in 'HH:ii:ss' (Hour:Minute:Second) format.
+            var end_time = '09:30:00';
+
+            // Get end timestamp
+            end_date = end_date.split('/');
+            end_time = end_time.split(':');
+
+            var date = new Date(end_date[0], (end_date[1] - 1), end_date[2], end_time[0], end_time[1], end_time[2]);
+            var end_timestamp = Math.floor(date.getTime() / 1000);
+
+            // Maximize compatibility
+            if (!Date.now) {
+                Date.now = function () { return new Date().getTime(); }
+            }
+
+            // Define variables
+            var timestamp = end_timestamp - Math.floor(Date.now() / 1000);
+
+            if (timestamp < 0) { timestamp = 0; }
+
+            var day = Math.floor(timestamp / (60 * 60 * 24));
+            timestamp -= (day * (60 * 60 * 24));
+
+            var hour = Math.floor(timestamp / (60 * 60));
+            timestamp -= (hour * (60 * 60));
+
+            var minute = Math.floor(timestamp / (60));
+            timestamp -= (minute * (60));
+
+            var second = timestamp;
+
+            // Run plugin
+            $("#getting-started .flipclock").flipClock({
+                theme: 'flat_white_1_medium',
+                type: 'countdown',
+                show_day: true,
+                second: second,
+                minute: minute,
+                hour: hour,
+                day: day
+            });
+
+        });
+    </script>
+
+    <!-- Square Rain effect -->
+    <script src="Content\repair\js\square.js"></script>
+
+    <!-- Main JS File -->
+    <script src="Content\repair\js\main.js"></script>
+
+
+</body>
+
+</html>
